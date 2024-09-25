@@ -15,3 +15,6 @@ class Pet(models.Model):
         super().save(*args, **kwargs)  # запазва обекта в базата, без super().save не се запазва в базата
 
 # функцията slugify замества всякакви спейсове с тирета и всякакви символи, които не са ASCII ги премахва
+
+    def __str__(self):
+        return self.name
