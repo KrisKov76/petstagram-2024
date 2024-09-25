@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "petstagram.photos.apps.PhotosConfig",
+    "petstagram.pets.apps.PetsConfig",
+    "petstagram.accounts.apps.AccountsConfig",
+     "petstagram.common.apps.CommonConfig"
+
 ]
 
 MIDDLEWARE = [
@@ -117,6 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+#за да може ние в нашите темплейти да заредим css-а динамично, трябва първо да кажем на django къде да го търси този
+# css или по-скоро къде да ни търси статичните файлове
+
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
