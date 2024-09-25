@@ -12,15 +12,15 @@ def register(request):
 
 
 # Profile details view
-def profile_details(request, pk: int):
+def profile_details(request, pk):
     return render(request, 'accounts/profile-details-page.html')
 
 
 # Profile edit view
-def profile_edit(request, pk: int):
+def profile_edit(request, pk):
     return render(request, 'accounts/profile-edit-page.html')
 
 
 # Profile delete view
-def profile_delete(request, pk: int):
+def profile_delete(request, pk):
     return render(request, 'accounts/profile-delete-page.html')
