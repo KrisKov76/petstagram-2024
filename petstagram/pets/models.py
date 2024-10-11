@@ -9,12 +9,10 @@ class Pet(models.Model):
     slug = models.SlugField(null=True, blank=True, unique=True, editable=False)
 
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
         if not self.slug:
+            super().save(*args, **kwargs)  # Първо съхраняваме обекта, за да получи ID
             self.slug = slugify(f"{self.name}-{self.id}")
-        super().save(*args, **kwargs)  # запазва обекта в базата, без super().save не се запазва в базата
-
-# функцията slugify замества всякакви спейсове с тирета и всякакви символи, които не са ASCII ги премахва
+        super().save(*args, **kwargs)  # Запазваме отново, за да се съхрани slug-а
 
     def __str__(self):
         return self.name

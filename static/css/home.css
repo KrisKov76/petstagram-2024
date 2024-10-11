@@ -54,9 +54,9 @@ body {
 }
 
 .searchbar {
-    width: -10%;
+    width: 80%;
     margin: 0 18% 5% 0;
-    text-align: end;
+    text-align: right;
 }
 
 .searchbar label {
@@ -85,8 +85,7 @@ body {
 
 .searchbar img {
     position: absolute;
-    margin-left: -2.5rem;
-    margin-top: -0.8rem;
+    margin-top: -2.45rem;
 }
 
 .searchbar input::placeholder {
@@ -188,6 +187,7 @@ main .container {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .profilepic {
@@ -448,4 +448,37 @@ div.footer {
 .footer a:hover {
     color: #ff0000;
 }
+/* Стили за контейнера на бутоните */
+.edit-btns {
+    display: flex;
+    gap: 10px; /* Разстояние между бутоните */
+    justify-content: flex-end; /* Позициониране вдясно */
+    width: 100%; /* Заема цялата налична ширина */
+    margin-top: 20px;
+}
 
+/* Общи стили за изображенията в бутоните */
+.edit-btns a img {
+    width: 40px; /* Размер на иконите */
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при задържане */
+    cursor: pointer; /* Промяна на курсора при задържане върху иконите */
+}
+
+/* Стили при задържане на бутоните */
+.edit-btns a img:hover {
+    transform: scale(1.1); /* Леко увеличение на иконата */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Лека сянка за по-изразен ефект */
+}
+
+/* Стили за бутона за редактиране */
+.edit-img {
+    border-radius: 50%; /* Закръгляне на изображението */
+}
+
+/* Стили за бутона за изтриване */
+.bin-img {
+    border-radius: 50%;
+    background-color: #f8d7da; /* Червеникав фон за бутона за изтриване */
+    padding: 5px; /* Леко вътрешно отстояние за по-добро визуално възприятие */
+}
